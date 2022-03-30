@@ -27,7 +27,10 @@ project('dav1d', ['c'],
     default_options: ['c_std=c99',
                       'warning_level=2',
                       'buildtype=release',
-                      'b_ndebug=if-release'],
+                      'b_ndebug=if-release',
+                      'default_library=shared', #static
+                      'b_bitcode=true',
+                      'b_asneeded=false'],
     meson_version: '>= 0.49.0')
 
 dav1d_soname_version       = '6.6.0'
